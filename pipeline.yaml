@@ -1,0 +1,8 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Optional placeholder for a CodePipeline implementation. This project uses GitHub Actions CI by default.
+
+Metadata:
+  Notes: >
+    The capstone permits CodePipeline or GitHub Actions. Use .github/workflows/ci.yml for CI.
+    If your instructor specifically requires AWS CodePipeline, create a CodeStar Connection
+    and wire Source -> CodeBuild -> CloudFormation/SAM deploy stages here.

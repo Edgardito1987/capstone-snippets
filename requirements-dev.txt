@@ -1,0 +1,4 @@
+pytest
+boto3
+aws-lambda-powertools[tracer]
+aws-sam-cli

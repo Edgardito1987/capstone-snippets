@@ -1,0 +1,14 @@
+version = 0.1
+
+[default.deploy.parameters]
+stack_name = "capstone-snippets"
+resolve_s3 = true
+s3_prefix = "capstone-snippets"
+region = "eu-west-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "EnableCanaryDeploy=\"false\""
+image_repositories = []
+
+[default.global.parameters]
+region = "eu-west-1"

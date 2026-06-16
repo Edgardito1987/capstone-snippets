@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.12
+    commands:
+      - pip install --upgrade pip
+      - pip install aws-sam-cli pytest boto3 aws-lambda-powertools[tracer]
+  pre_build:
+    commands:
+      - sam validate
+      - pytest -q
+  build:
+    commands:
+      - sam build --cached
+artifacts:
+  files:
+    - template.yaml
+    - .aws-sam/**/*
